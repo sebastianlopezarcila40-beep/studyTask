@@ -1,0 +1,66 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>StudySoft - studyTask</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section id="inicio" class="card">
+    <<img src="../img/logo.png" class="logo">
+    <h1>StudySoft</h1>
+    <h2>studyTask</h2>
+    <p>Organiza tus tareas escolares de forma rápida, clara y moderna.</p>
+    <button onclick="mostrarLogin()">Entrar</button>
+    <small>Desarrollado por Sebastián López</small>
+  </section>
+
+  <section id="login" class="card" style="display: none;">
+    <div class="logo">SS</div>
+    <h1>Iniciar sesión</h1>
+
+    <input type="email" id="loginCorreo" placeholder="Correo">
+    <input type="password" id="loginPassword" placeholder="Contraseña">
+
+    <button onclick="iniciarSesion()">Ingresar</button>
+    <button class="secundario" onclick="mostrarRegistro()">Registrarme</button>
+    <button class="link" onclick="recuperarPassword()">Olvidé mi contraseña</button>
+  </section>
+
+  <section id="registro" class="card" style="display: none;">
+    <div class="logo">SS</div>
+    <h1>Crear cuenta</h1>
+
+    <input type="text" id="registroUsuario" placeholder="Usuario">
+    <input type="email" id="registroCorreo" placeholder="Correo">
+    <input type="password" id="registroPassword" placeholder="Crear contraseña">
+
+    <button onclick="registrarUsuario()">Crear cuenta</button>
+    <button class="secundario" onclick="mostrarLogin()">Volver</button>
+  </section>
+
+  <section id="app" class="app" style="display: none;">
+    <header>
+      <div>
+        <h1>StudySoft</h1>
+        <p>studyTask - Panel de tareas</p>
+      </div>
+      <button onclick="cerrarSesion()">Cerrar sesión</button>
+    </header>
+
+    <div class="formulario">
+      <input type="text" id="tarea" placeholder="Nombre de la tarea">
+      <input type="text" id="materia" placeholder="Materia">
+      <input type="date" id="fecha">
+      <button onclick="agregarTarea()">Agregar tarea</button>
+    </div>
+
+    <ul id="listaTareas"></ul>
+
+    <footer>Desarrollado por Sebastián López</footer>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
